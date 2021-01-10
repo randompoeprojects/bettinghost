@@ -1,0 +1,2 @@
+# bettinghost
+for bets
