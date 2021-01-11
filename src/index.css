@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  background-color:lightslategray;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  text-align: center;
+}
+.left-side-panel {
+  width: 50%;
+}
+.right-side-panel {
+  width: 50%;
+}
+.text-align-center {
+  text-align: center;
+}
+.main-body {
+  display: flex;
+  flex-direction: row;
+  height: 900px;
+}
+.bordered-panel {
+  border: 4px solid #000000;
+}
+.control-bar {
+  border-bottom: 2px solid #000000;
+  display: flex;
+  flex-direction: row;
+}
+.player-input-field-container, .reset-bets-button-container, .player-input-button-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.player-input-field-container {
+  flex-grow: 2;
+}
+.reset-bets-button-container, .player-input-button-container {
+  flex-grow: 1;
+}
+.betting-control-panel {
+  height: 30%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.betting-control-bar {
+  border-bottom: 2px solid #000000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.remove-outcome-button {
+  color: red;
+  margin: 2px;
+  width: 5%;
+}
+.outcome-name-span, .add-bet-player-span, .winner-check-div {
+  padding-left: 5px;
+  padding-right: 6px;
+  padding-top: 3px;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  width: 20%;
+}
+.add-bet-button {
+  width: 10%;
+}
+.border-right {
+  border-right: 2px solid black;
+}
+.flex-grow-1 {
+  flex-grow:1;
+}
+.flex-grow-2 {
+  flex-grow:2;
+}
+.flex-grow-3 {
+  flex-grow:3;
+}
+.winner-check-div {
+  flex-grow: 1;
+}
+.betting-area-header {
+  text-align: center;
+}
+.payout-control-bar {
+  display: flex;
+}
+.payout-control-bar {
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+}
+.payout-results-panel {
+  display: flex;
+  flex-direction: column;
+}
+.payout-result {
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.payout-result-player-container, .payout-result-win-container {
+  width: 50%;
+}
+.existing-bets-panel {
+  display: flex;
+  flex-direction: column;
+}
+.existing-bets-header-container, .existing-bet {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid black;
+}
+.existing-bets-h2-container {
+  display: flex;
+  justify-content: center;
+}
+.existing-bet-player-container, .existing-bet-outcome-container, .existing-bet-amount-container {
+  width: 33%;
+  
 }
