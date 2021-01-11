@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import MainControlBar from './source/mainControlBar.js';
 import BettingControlPanel from './source/bettingControlPanel.js';
 import PayoutsControlPanel from './source/payoutsControlPanel.js';
@@ -109,9 +109,6 @@ let calculatePayout = () => {
 };
 
 let bettingControlPanel = <BettingControlPanel setWinner={setWinner} outcomes={outcomes} addBet={addBet}/>;
-
-useEffect(() => {
-},[outcomes]);
 
   return (
     <div className="betting-host">
