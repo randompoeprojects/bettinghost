@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import MainControlBar from './source/mainControlBar.js';
 import BettingControlPanel from './source/bettingControlPanel.js';
 import PayoutsControlPanel from './source/payoutsControlPanel.js';
@@ -29,8 +29,8 @@ class Payout {
 
 
 function App() {
-  const [outcomes, setOutcomes] = useState([new Outcome("Qt wins", false), new Outcome("Dyrus wins", false)]);
-  const [bets, setBets] = useState([new Bet("soda","Qt wins", 100), new Bet("vigor","Qt wins", 300), new Bet("op","Dyrus wins", 1000), new Bet("calvin","Dyrus wins", 200)]);
+  const [outcomes, setOutcomes] = useState([]);
+  const [bets, setBets] = useState([]);
   const [payouts, setPayouts] = useState([]);
   const [houseCut, setHouseCut] = useState(5);
 
@@ -95,8 +95,7 @@ let calculatePayout = () => {
   let totalBetAmount = getTotalBetAmount();
   let totalWinnerBetAmount = getTotalWinnerBetAmount(winnerOutcomes);
   let calculatedPayouts = [];
-  console.log(bets);
-  console.log(winnerOutcomes.values());
+  console.log(outcomes);
   for(var i = 0; i < bets.length; i++){
     if(winnerOutcomes.has(bets[i].outcome)){
       let calculatedPayoutAmount = (bets[i].amount * totalBetAmount)/totalWinnerBetAmount;
@@ -109,6 +108,9 @@ let calculatePayout = () => {
 };
 
 let bettingControlPanel = <BettingControlPanel setWinner={setWinner} outcomes={outcomes} addBet={addBet}/>;
+
+useEffect(() => {
+},[outcomes]);
 
   return (
     <div className="betting-host">
