@@ -99,7 +99,6 @@ let calculatePayout = () => {
   console.log(winnerOutcomes.values());
   for(var i = 0; i < bets.length; i++){
     if(winnerOutcomes.has(bets[i].outcome)){
-      console.log("Calculating winner amount for " + bets[i].player + ": " + bets[i].amount + " - " + totalBetAmount + " - " + totalWinnerBetAmount);
       let calculatedPayoutAmount = (bets[i].amount * totalBetAmount)/totalWinnerBetAmount;
       let tax = (calculatedPayoutAmount - bets[i].amount) * (houseCut/100)
       calculatedPayouts.push(new Payout(bets[i].player, Math.floor(calculatedPayoutAmount - tax)));
